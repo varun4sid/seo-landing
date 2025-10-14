@@ -1,5 +1,8 @@
+import StickyCalculator from "./components/StickyCalculator/StickyCalculator";
+import "./App.css";
+
 function App() {
-    return <h1>Landing Page</h1>;
+    return <StickyCalculator />;
 }
 
 export default App;

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+body {
+    background-color: hsl(222.2 84.4% 4.9%);
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.horizontal {
+    height: 2px;
+    display: block;
+    background-color: oklch(37.3% 0.034 259.733);
+    border-color: oklch(37.3% 0.034 259.733);
+    margin: 5px;
+}
+
+.sticky-calculator {
+    position: sticky;
+    max-width: 25vw;
+    min-width: 300px;
+    width: 25vw;
+    border-color: oklch(37.3% 0.034 259.733);
+    border-radius: 3px;
+}
+
+@media (max-width: 700px) {
+    .sticky-calculator {
+        display: none;
+    }
+}
