@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Amount from "./Amount";
 import SelectScheme from "./SelectScheme";
-import { getReturns } from "../../constants/calculations";
-import { suryoday } from "../../constants/db";
+import { getReturns } from "../../../constants/calculations";
+import { suryoday } from "../../../constants/db";
 
 function StickyCalculator() {
     const [amount, setAmount] = useState(100000);

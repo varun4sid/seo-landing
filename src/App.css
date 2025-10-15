@@ -3,6 +3,10 @@
 body {
     background-color: hsl(222.2 84.4% 4.9%);
     color: rgba(255, 255, 255, 0.87);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+        "Noto Color Emoji";
 }
 
 .horizontal {
@@ -27,4 +31,30 @@ body {
     .sticky-calculator {
         display: none;
     }
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar-container {
+    border-bottom: 2px solid oklch(37.3% 0.034 259.733);
+    padding: 10px;
+}
+
+#navbar-logo {
+    margin: 1vh 2vw;
+    height: 45px;
+    display: inline;
+    margin-right: auto;
+}
+
+#sign-up {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin: 1vh 2vw;
 }

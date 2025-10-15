@@ -1,11 +1,13 @@
-import StickyCalculator from "./components/StickyCalculator/StickyCalculator";
 import "./App.css";
+import Content from "./components/Content/Content";
 import Footer from "./components/Footer/Footer";
+import NavBar from "./components/NavBar";
 
 function App() {
     return (
         <>
-            <StickyCalculator />
+            <NavBar />
+            <Content />
             <Footer />
         </>
     );
