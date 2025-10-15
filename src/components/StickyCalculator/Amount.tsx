@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import type { amountState } from "../../constants/interfaces";
 
 function Amount({ amount, setAmount }: amountState) {
@@ -6,13 +5,9 @@ function Amount({ amount, setAmount }: amountState) {
         setAmount(Number(e.target.value));
     };
 
-    useEffect(() => {
-        console.log(`Amount : ${amount}`);
-    }, [amount]);
-
     return (
         <fieldset className="m-4 p-4 border-2 border-gray-700 rounded-lg">
-            <legend className="font-semibold px-2">Amountdfvkdfbk</legend>
+            <legend className="font-semibold px-2">Amount</legend>
             <input
                 type="number"
                 id="amount"

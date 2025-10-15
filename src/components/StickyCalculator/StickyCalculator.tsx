@@ -19,8 +19,8 @@ function StickyCalculator() {
             <div className="horizontal"></div>
             <Amount amount={amount} setAmount={setAmount} />
             <SelectScheme setScheme={setScheme} />
-            <p>Maturity Amount : {returns.maturity.toFixed()}</p>
-            <p>Total Return : {returns.return.toFixed()}</p>
+            <p>Maturity Amount : {returns.maturity}</p>
+            <p>Total Return : {returns.return}</p>
         </div>
     );
 }

@@ -18,8 +18,9 @@ body {
     max-width: 25vw;
     min-width: 300px;
     width: 25vw;
-    border-color: oklch(37.3% 0.034 259.733);
-    border-radius: 3px;
+    border: 2px solid oklch(37.3% 0.034 259.733);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 @media (max-width: 700px) {

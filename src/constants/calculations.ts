@@ -4,9 +4,11 @@ export function getReturns(
     tenure: number
 ): { return: number; maturity: number } {
     const n = 4; //compounding rate (per year)
-    const maturity = amount * Math.pow(1 + rate / (100 * n), n * tenure);
+    let maturity = amount * Math.pow(1 + rate / (100 * n), n * tenure);
+    maturity -= amount;
+
     return {
-        maturity,
-        return: amount + maturity,
+        maturity: Number(maturity.toFixed()),
+        return: Number((amount + maturity).toFixed()),
     };
 }
