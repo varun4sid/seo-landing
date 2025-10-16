@@ -1,7 +1,23 @@
+import { useEffect } from "react";
 import logo from "../../assets/superfd-logo.png";
 import "./Footer.css";
 
 function Footer() {
+    useEffect(() => {
+        const categories = document.querySelectorAll(".category");
+
+        categories.forEach((category) => {
+            const anchors = category.querySelectorAll("a");
+            anchors.forEach((anchor, index) => {
+                if (index < anchors.length - 1) {
+                    const divider = document.createElement("span");
+                    divider.innerHTML = " | ";
+                    anchor.insertAdjacentElement("afterend", divider);
+                }
+            });
+        });
+    }, []);
+
     return (
         <div className="footer">
             <hr />
