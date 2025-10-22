@@ -14,7 +14,7 @@ function StickyCalculator() {
     const returns = getReturns(amount, select.rate, select.tenure);
 
     return (
-        <div className="sticky-calculator">
+        <div className="sticky-calculator content-sub">
             <p className="m-1">Explore best returns from Suryoday SFB</p>
             <div className="horizontal"></div>
             <Amount amount={amount} setAmount={setAmount} />

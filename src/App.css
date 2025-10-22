@@ -19,12 +19,16 @@ body {
 
 .sticky-calculator {
     position: sticky;
-    max-width: 25vw;
+    max-width: 20vw;
     min-width: 300px;
-    width: 25vw;
+    width: 20vw;
     border: 2px solid oklch(37.3% 0.034 259.733);
     border-radius: 5px;
     padding: 10px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    z-index: 10;
+    top: 0%;
 }
 
 @media (max-width: 700px) {
@@ -57,4 +61,13 @@ body {
     padding: 8px 16px;
     cursor: pointer;
     margin: 1vh 2vw;
+}
+
+#hero-banner {
+    background-color: oklch(37.3% 0.034 259.733);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 10px;
+    width: 75%;
+    height: 150px;
 }
