@@ -62,12 +62,3 @@ body {
     cursor: pointer;
     margin: 1vh 2vw;
 }
-
-#hero-banner {
-    background-color: oklch(37.3% 0.034 259.733);
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px 10px;
-    width: 75%;
-    height: 150px;
-}

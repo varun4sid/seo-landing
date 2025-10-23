@@ -19,3 +19,20 @@
     grid-column-end: 8;
     border: 2px solid pink;
 }
+
+#hero-banner {
+    background-color: rgb(30, 41, 59);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 10px;
+    width: 75%;
+}
+
+#know-more {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
