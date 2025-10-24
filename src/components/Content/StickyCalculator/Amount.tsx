@@ -1,4 +1,4 @@
-import type { amountState } from "../../../constants/interfaces";
+import type { amountState } from "@/constants/interfaces";
 
 function Amount({ amount, setAmount }: amountState) {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

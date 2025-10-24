@@ -3,21 +3,18 @@
     gap: 3vw;
     grid-template: auto / repeat(8, 10vw);
     justify-content: center;
-    border: 2px solid green;
     align-items: start;
 }
 
 .content-main {
     grid-column-start: 2;
     grid-column-end: 6;
-    border: 2px solid white;
     height: 2000px;
 }
 
 .content-sub {
     grid-column-start: 6;
     grid-column-end: 8;
-    border: 2px solid pink;
 }
 
 #hero-banner {
@@ -35,4 +32,10 @@
     border-radius: 3px;
     padding: 8px 16px;
     cursor: pointer;
+}
+
+#faq-container {
+    padding: 20px;
+    border: 2px solid oklch(37.3% 0.034 259.733);
+    border-radius: 10px;
 }

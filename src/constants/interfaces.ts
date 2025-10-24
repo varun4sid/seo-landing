@@ -11,3 +11,8 @@ export interface Scheme {
 export interface schemeState {
     setScheme: (val: number) => void;
 }
+
+export interface FaqPair {
+    question: string;
+    answer: string;
+}

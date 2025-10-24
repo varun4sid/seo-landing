@@ -28,7 +28,6 @@ body {
     border: 2px solid oklch(37.3% 0.034 259.733);
     border-radius: 5px;
     padding: 10px;
-    max-height: calc(100vh - 40px);
     overflow-y: auto;
     z-index: 10;
     top: 0%;

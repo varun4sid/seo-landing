@@ -4,7 +4,7 @@ import Article from "./Article/Article";
 
 function Content() {
     return (
-        <div className="content-container">
+        <div className="content-container mt-3">
             <Article />
             <StickyCalculator />
         </div>

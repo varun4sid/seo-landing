@@ -1,5 +1,5 @@
-import { suryoday } from "../../../constants/db";
-import type { schemeState } from "../../../constants/interfaces";
+import { suryoday } from "@/constants/db";
+import type { schemeState } from "@/constants/interfaces";
 
 function SelectScheme({ setScheme }: schemeState) {
     function handleChangeScheme(e: React.ChangeEvent<HTMLSelectElement>) {

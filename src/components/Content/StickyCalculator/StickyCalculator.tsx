@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Amount from "./Amount";
 import SelectScheme from "./SelectScheme";
-import { getReturns } from "../../../constants/calculations";
-import { suryoday } from "../../../constants/db";
+import { getReturns } from "@/constants/calculations";
+import { suryoday } from "@/constants/db";
 
 function StickyCalculator() {
     const [amount, setAmount] = useState(100000);
@@ -14,7 +14,7 @@ function StickyCalculator() {
     const returns = getReturns(amount, select.rate, select.tenure);
 
     return (
-        <div className="sticky-calculator content-sub">
+        <div className="sticky-calculator content-sub mt-3">
             <p className="m-1">Explore best returns from Suryoday SFB</p>
             <div className="horizontal"></div>
             <Amount amount={amount} setAmount={setAmount} />

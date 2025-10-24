@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import logo from "../../assets/superfd-logo.png";
+import logo from "@/assets/superfd-logo.png";
 import "./Footer.css";
 
 function Footer() {
