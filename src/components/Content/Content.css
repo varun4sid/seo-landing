@@ -34,8 +34,10 @@
     cursor: pointer;
 }
 
-#faq-container {
+#faq-container,
+#rate-table {
     padding: 20px;
     border: 2px solid oklch(37.3% 0.034 259.733);
     border-radius: 10px;
+    margin: 10px auto;
 }
