@@ -10,6 +10,7 @@ import faqPairs from "@/constants/faq";
 function FAQ() {
     return (
         <div id="faq-container">
+            <h4 className="font-bold">FAQ</h4>
             <Accordion type="single" className="w-full" collapsible>
                 {faqPairs.map((qna, index) => (
                     <AccordionItem value={"item-" + index}>

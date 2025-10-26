@@ -12,6 +12,7 @@ import { sbi } from "@/constants/db";
 function RatesTable() {
     return (
         <div id="rate-table">
+            <h4 className="font-bold mb-1.5">Interest Rates</h4>
             <Table>
                 <TableHeader className="font-bold">
                     <TableRow>
@@ -24,8 +25,12 @@ function RatesTable() {
                     {sbi.schemes.map((scheme) => (
                         <TableRow>
                             <TableCell>{scheme.duration}</TableCell>
-                            <TableCell>{scheme.rate.regular + "%"}</TableCell>
-                            <TableCell>{scheme.rate.senior + "%"}</TableCell>
+                            <TableCell>
+                                {scheme.rate.regular.toFixed(2) + "%"}
+                            </TableCell>
+                            <TableCell>
+                                {scheme.rate.senior.toFixed(2) + "%"}
+                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

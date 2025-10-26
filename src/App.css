@@ -22,9 +22,9 @@ body {
 
 .sticky-calculator {
     position: sticky;
-    max-width: 20vw;
+    max-width: 22vw;
     min-width: 300px;
-    width: 20vw;
+    width: 22vw;
     border: 2px solid oklch(37.3% 0.034 259.733);
     border-radius: 5px;
     padding: 10px;

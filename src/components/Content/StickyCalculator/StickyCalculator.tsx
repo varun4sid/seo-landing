@@ -15,12 +15,30 @@ function StickyCalculator() {
 
     return (
         <div className="sticky-calculator content-sub mt-3">
-            <p className="m-1">Explore best returns from Suryoday SFB</p>
-            <div className="horizontal"></div>
-            <Amount amount={amount} setAmount={setAmount} />
-            <SelectScheme setScheme={setScheme} />
-            <p>Maturity Amount : {returns.maturity}</p>
-            <p>Total Return : {returns.return}</p>
+            <div className="p-2">
+                <p className="m-1 font-bold">
+                    Explore best returns from Suryoday SFB
+                </p>
+                <div className="horizontal"></div>
+                <Amount amount={amount} setAmount={setAmount} />
+                <SelectScheme setScheme={setScheme} />
+                <div className="ml-4 mt-2 font-light flex justify-between">
+                    <p>
+                        {"Rs "}
+                        <span className="text-green-700 font-bold">
+                            {returns.maturity}
+                        </span>
+                        <span className="block">Maturity Amount</span>
+                    </p>
+                    <p>
+                        {"Rs "}
+                        <span className="text-green-700 font-bold">
+                            {returns.return}
+                        </span>
+                        <span className="block">Total Return</span>
+                    </p>
+                </div>
+            </div>
         </div>
     );
 }
