@@ -21,7 +21,7 @@ function SelectScheme({ setScheme }: schemeState) {
                     {suryoday.schemes.map((scheme) => (
                         <option
                             value={scheme.tenure}
-                        >{`${scheme.rate}% (${scheme.tenure}Y)`}</option>
+                        >{`${scheme.rate.regular}% (${scheme.tenure}Y)`}</option>
                     ))}
                 </select>
             </fieldset>

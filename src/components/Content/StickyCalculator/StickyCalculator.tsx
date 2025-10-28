@@ -11,7 +11,7 @@ function StickyCalculator() {
     const select = suryoday.schemes.filter(
         (object) => object.tenure === scheme
     )[0];
-    const returns = getReturns(amount, select.rate, select.tenure);
+    const returns = getReturns(amount, select.rate.regular, select.tenure);
 
     return (
         <div className="sticky-calculator content-sub mt-3">

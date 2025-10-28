@@ -1,9 +1,36 @@
+//prettier-ignore
 const suryoday = {
     schemes: [
-        { rate: 7.25, tenure: 3 },
-        { rate: 8.05, tenure: 5 },
-        { rate: 7.25, tenure: 10 },
+        {
+            tenure: 1,
+            rate: {
+                regular: 7.40,
+                senior: 7.60,
+            },
+        },
+        {
+            tenure: 2,
+            rate: {
+                regular: 7.25,
+                senior: 7.45,
+            },
+        },
+        {
+            tenure: 3,
+            rate: {
+                regular: 7.25,
+                senior: 7.45,
+            },
+        },
+        {
+            tenure: 5,
+            rate: {
+                regular: 8.05,
+                senior: 8.10,
+            },
+        },
     ],
+    lastUpdated: "08 Oct, 2025",
 };
 
 //prettier-ignore
@@ -71,7 +98,7 @@ const sbi = {
                 regular: 6.60,
                 senior: 7.10,
             },
-        }
+        },
     ],
     lastUpdated: "15 Jul, 2025",
 };
