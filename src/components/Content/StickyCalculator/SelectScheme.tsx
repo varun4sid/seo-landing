@@ -1,9 +1,15 @@
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 import { suryoday } from "@/constants/db";
-import type { schemeState } from "@/constants/interfaces";
+import type { selectSchemeProps } from "@/constants/interfaces";
 
-function SelectScheme({ setScheme }: schemeState) {
+function SelectScheme({ setScheme, setQuota, quota }: selectSchemeProps) {
     function handleChangeScheme(e: React.ChangeEvent<HTMLSelectElement>) {
         setScheme(Number(e.target.value));
+    }
+
+    function handleChangeQuota(checked: boolean | "indeterminate") {
+        setQuota(Boolean(checked));
     }
 
     return (
@@ -19,12 +25,16 @@ function SelectScheme({ setScheme }: schemeState) {
                         Select
                     </option>
                     {suryoday.schemes.map((scheme) => (
-                        <option
-                            value={scheme.tenure}
-                        >{`${scheme.rate.regular}% (${scheme.tenure}Y)`}</option>
+                        <option value={scheme.tenure}>{`${
+                            quota ? scheme.rate.senior : scheme.rate.regular
+                        }% (${scheme.tenure}Y)`}</option>
                     ))}
                 </select>
             </fieldset>
+            <div className="m-5 flex items-center space-x-2">
+                <Switch id="quota" onCheckedChange={handleChangeQuota} />
+                <Label htmlFor="quota">Senior Citizen</Label>
+            </div>
         </div>
     );
 }

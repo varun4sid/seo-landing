@@ -1,4 +1,3 @@
-//prettier-ignore
 const suryoday = {
     schemes: [
         {
@@ -33,7 +32,7 @@ const suryoday = {
     lastUpdated: "08 Oct, 2025",
 };
 
-//prettier-ignore
+
 const sbi = {
     schemes: [
         {

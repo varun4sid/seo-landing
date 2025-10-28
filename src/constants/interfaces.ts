@@ -8,8 +8,10 @@ export interface Scheme {
     tenure: number;
 }
 
-export interface schemeState {
+export interface selectSchemeProps {
     setScheme: (val: number) => void;
+    setQuota: (val: boolean) => void;
+    quota: boolean;
 }
 
 export interface FaqPair {
