@@ -35,7 +35,8 @@
 }
 
 #faq-container,
-#rate-table {
+#rate-table,
+#comparison {
     padding: 20px;
     border: 2px solid oklch(37.3% 0.034 259.733);
     border-radius: 10px;

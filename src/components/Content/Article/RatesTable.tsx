@@ -23,7 +23,7 @@ function RatesTable() {
                 </TableHeader>
                 <TableBody>
                     {sbi.schemes.map((scheme) => (
-                        <TableRow>
+                        <TableRow key={scheme.rate.regular}>
                             <TableCell>{scheme.duration}</TableCell>
                             <TableCell>
                                 {scheme.rate.regular.toFixed(2) + "%"}
@@ -34,9 +34,7 @@ function RatesTable() {
                         </TableRow>
                     ))}
                 </TableBody>
-                <TableFooter>
-                    <p>Last Updated : {sbi.lastUpdated}</p>
-                </TableFooter>
+                <TableFooter>Last Updated : {sbi.lastUpdated}</TableFooter>
             </Table>
         </div>
     );

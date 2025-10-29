@@ -18,3 +18,8 @@ export interface FaqPair {
     question: string;
     answer: string;
 }
+
+export interface RatePair {
+    regular: number;
+    senior: number;
+}
