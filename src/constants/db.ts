@@ -120,6 +120,47 @@ const sbi = {
     account_required: true,
 };
 
-const sfBanks = [suryoday,sbi];
+const utkarsh = {
+    bankName: "Utkarsh",
+    schemes: [
+        {
+            tenure: 1.5,
+            duration: "1 year 6 months",
+            rate: {
+                regular: 7.25,
+                senior: 7.75,
+            }
+        },
+        {
+            tenure: 2,
+            duration: "2 years",
+            rate: {
+                regular: 7.65,
+                senior: 8.15,
+            }
+        },
+        {
+            tenure: 3,
+            duration: "3 years",
+            rate: {
+                regular: 7.65,
+                senior: 8.15,
+            }
+        },
+        {
+            tenure: 3.5,
+            duration: "3.5 years",
+            rate: {
+                regular: 7.50,
+                senior: 8.00,
+            }
+        },
+    ],
+    lastUpdated: "15 Jul, 2025",
+    account_required: false,
+    dicgc_insured: true
+}
 
-export { suryoday, sbi, sfBanks };
+const sfBanks = [suryoday,sbi,utkarsh];
+
+export { suryoday, sbi, utkarsh, sfBanks };
