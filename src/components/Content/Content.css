@@ -42,3 +42,15 @@
     border-radius: 10px;
     margin: 10px auto;
 }
+
+.tick-svg {
+    height: 36px;
+    width: 36px;
+    fill: green;
+}
+
+.cross-svg {
+    height: 36px;
+    width: 36px;
+    fill: red;
+}

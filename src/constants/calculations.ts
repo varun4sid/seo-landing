@@ -2,13 +2,13 @@ export function getReturns(
     amount: number,
     rate: number,
     tenure: number
-): { return: string; maturity: string } {
+): { maturity: string; gains: string } {
     const n = 4; //compounding rate (per year)
-    let maturity = amount * Math.pow(1 + rate / (100 * n), n * tenure);
-    maturity -= amount;
+    let gains = amount * Math.pow(1 + rate / (100 * n), n * tenure);
+    gains -= amount;
 
     return {
-        maturity: Number(maturity.toFixed()).toLocaleString("en-IN"),
-        return: Number((amount + maturity).toFixed()).toLocaleString("en-IN"),
+        gains: Number(gains.toFixed()).toLocaleString("en-IN"),
+        maturity: Number((amount + gains).toFixed()).toLocaleString("en-IN"),
     };
 }

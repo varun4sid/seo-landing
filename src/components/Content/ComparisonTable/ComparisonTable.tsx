@@ -9,18 +9,60 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SelectBank from "./SelectBank";
 import SelectScheme from "./SelectScheme";
-import type { RatePair } from "@/constants/interfaces";
+import type { SchemeTerms } from "@/constants/interfaces";
+import { getReturns } from "@/constants/calculations";
+import TickIcon from "@/components/ui/TickIcon";
+import CrossIcon from "@/components/ui/CrossIcon";
 
 function ComparisonTable() {
     const [amount, setAmount] = useState(100000);
     const [quota, setQuota] = useState(false);
     const [bank1, setBank1] = useState("SBI");
     const [bank2, setBank2] = useState("");
-    const [scheme1, setScheme1] = useState<RatePair | null>();
-    const [scheme2, setScheme2] = useState<RatePair | null>();
+    const [scheme1, setScheme1] = useState<SchemeTerms | null>();
+    const [scheme2, setScheme2] = useState<SchemeTerms | null>();
+
+    const rate1 = scheme1
+        ? quota
+            ? scheme1.rate.senior
+            : scheme1.rate.regular
+        : "-";
+    const rate2 = scheme2
+        ? quota
+            ? scheme2.rate.senior
+            : scheme2.rate.regular
+        : "-";
+
+    const yield1 =
+        rate1 !== "-"
+            ? scheme1
+                ? getReturns(amount, rate1, scheme1.tenure)
+                : "-"
+            : "-";
+
+    const yield2 =
+        rate2 !== "-"
+            ? scheme2
+                ? getReturns(amount, rate2, scheme2.tenure)
+                : "-"
+            : "-";
+
+    const gains1 = yield1 !== "-" ? yield1.gains : "-";
+    const gains2 = yield2 !== "-" ? yield2.gains : "-";
+
+    const maturity1 = yield1 !== "-" ? yield1.maturity : "-";
+    const maturity2 = yield2 !== "-" ? yield2.maturity : "-";
+
+    useEffect(() => {
+        setScheme1(null);
+    }, [bank1]);
+
+    useEffect(() => {
+        setScheme2(null);
+    }, [bank2]);
 
     function handleChangeAmount(e: React.ChangeEvent<HTMLInputElement>) {
         setAmount(Number(e.target.value));
@@ -82,12 +124,63 @@ function ComparisonTable() {
                     </TableHeader>
                     <TableBody>
                         <TableRow>
-                            <TableCell key={"Interest"}>Interest</TableCell>
+                            <TableCell>Gains</TableCell>
+                            <TableCell>{gains1}</TableCell>
+                            <TableCell>{gains2}</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Maturity</TableCell>
+                            <TableCell>{maturity1}</TableCell>
+                            <TableCell>{maturity2}</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Account Required</TableCell>
                             <TableCell>
-                                {quota ? scheme1?.senior : scheme1?.regular}
+                                {scheme1 ? (
+                                    scheme1.account_required ? (
+                                        <TickIcon />
+                                    ) : (
+                                        <CrossIcon />
+                                    )
+                                ) : (
+                                    "-"
+                                )}
                             </TableCell>
                             <TableCell>
-                                {quota ? scheme2?.senior : scheme2?.regular}
+                                {scheme2 ? (
+                                    scheme2.account_required ? (
+                                        <TickIcon />
+                                    ) : (
+                                        <CrossIcon />
+                                    )
+                                ) : (
+                                    "-"
+                                )}
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>DICGC Insured</TableCell>
+                            <TableCell>
+                                {scheme1 ? (
+                                    scheme1.dicgc_insured ? (
+                                        <TickIcon />
+                                    ) : (
+                                        <CrossIcon />
+                                    )
+                                ) : (
+                                    "-"
+                                )}
+                            </TableCell>
+                            <TableCell>
+                                {scheme2 ? (
+                                    scheme2.dicgc_insured ? (
+                                        <TickIcon />
+                                    ) : (
+                                        <CrossIcon />
+                                    )
+                                ) : (
+                                    "-"
+                                )}
                             </TableCell>
                         </TableRow>
                     </TableBody>

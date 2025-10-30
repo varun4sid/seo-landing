@@ -17,7 +17,7 @@ function StickyCalculator() {
         ? selectedScheme.rate.senior
         : selectedScheme.rate.regular;
 
-    const returns = getReturns(amount, useRate, selectedScheme.tenure);
+    const yield1 = getReturns(amount, useRate, selectedScheme.tenure);
 
     return (
         <div className="sticky-calculator content-sub mt-3">
@@ -36,14 +36,14 @@ function StickyCalculator() {
                     <p>
                         {"Rs "}
                         <span className="text-green-700 font-bold">
-                            {returns.maturity}
+                            {yield1.gains}
                         </span>
                         <span className="block">Maturity Amount</span>
                     </p>
                     <p>
                         {"Rs "}
                         <span className="text-green-700 font-bold">
-                            {returns.return}
+                            {yield1.maturity}
                         </span>
                         <span className="block">Total Return</span>
                     </p>

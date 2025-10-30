@@ -35,6 +35,8 @@ const suryoday = {
         },
     ],
     lastUpdated: "08 Oct, 2025",
+    dicgc_insured: true,
+    account_required: false,
 };
 
 const sbi = {
@@ -114,6 +116,8 @@ const sbi = {
         },
     ],
     lastUpdated: "15 Jul, 2025",
+    dicgc_insured: true,
+    account_required: true,
 };
 
 const sfBanks = [suryoday,sbi];

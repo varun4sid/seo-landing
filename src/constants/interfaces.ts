@@ -19,7 +19,13 @@ export interface FaqPair {
     answer: string;
 }
 
-export interface RatePair {
-    regular: number;
-    senior: number;
+export interface SchemeTerms {
+    bankName: string;
+    rate: {
+        regular: number;
+        senior: number;
+    };
+    tenure: number;
+    account_required: boolean;
+    dicgc_insured: boolean;
 }
